@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class UseYourInsideVoice
+public class StringChallenges
 	{
 		static Scanner userInput = new Scanner(System.in);
 		static boolean stillPlaying = true;	
@@ -36,7 +36,7 @@ public class UseYourInsideVoice
 					}
 				else
 					{
-						stillPlaying = true;
+						System.out.println("Please enter (1) Yes or (2) No.");;
 					}
 			}
 	}
