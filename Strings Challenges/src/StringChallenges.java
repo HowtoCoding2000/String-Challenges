@@ -3,17 +3,40 @@ public class StringChallenges
 	{
 		static Scanner userInput = new Scanner(System.in);
 		static boolean stillPlaying = true;	
-		static String shout;
+		static String shout = "";
+		static int codeSelection;
+		static String text = "";
 		public static void main(String[] args)
+			{
+				askWhichCodeToRun();
+				runSelectedCode();
+			}
+		public static void askWhichCodeToRun()
+			{
+				System.out.println("Would you like to run (1) UseYourInsideVoice or (2) VerticalLetters");
+				codeSelection = userInput.nextInt();
+			}
+		public static void runSelectedCode()
+			{
+				if (codeSelection == 1)
+					{
+						useYourInsideVoice();
+					}
+				else
+					{
+						verticalLetters();
+					}
+			}
+		public static void useYourInsideVoice()
 			{
 				while (stillPlaying)
 					{						
-						askForInput();
+						askForYellInput();
 						convertToLowerCase();
 						askToPlayAgain();
 					}
 			}
-		public static void askForInput()
+		public static void askForYellInput()
 			{
 				System.out.println("Yell something.");
 				shout = userInput.nextLine();
@@ -36,7 +59,25 @@ public class StringChallenges
 					}
 				else
 					{
-						System.out.println("Please enter (1) Yes or (2) No.");;
+						stillPlaying = true;
+					}
+			}
+		public static void verticalLetters()
+			{
+				askForInput();
+				printTextVertically();
+				askToPlayAgain();
+			}
+		public static void askForInput()
+			{
+				System.out.println("Type something.");
+				text = userInput.nextLine();
+			}
+		public static void printTextVertically()
+			{
+				for (int i = 0; i < text.length(); i ++)
+					{
+						System.out.println(text.substring(i, i + 1));
 					}
 			}
 	}
