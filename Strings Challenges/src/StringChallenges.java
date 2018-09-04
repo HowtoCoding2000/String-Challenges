@@ -64,7 +64,7 @@ public class StringChallenges
 							}
 						else if (runAnotherCode == 2)
 							{
-								System.out.println("Thank you for running StingChallenges.");
+								System.out.println("Thank you for running StringChallenges.");
 								stillRunningCode = false;
 								stillAsking = false;
 							}
@@ -123,7 +123,14 @@ public class StringChallenges
 											}
 									}
 							}
-						System.out.println("There are " + numberOfVowels + " vowels in that text.");
+						if (numberOfVowels == 1)
+							{
+								System.out.println("There is 1 vowel in that text.");
+							}
+						else
+							{
+								System.out.println("There are " + numberOfVowels + " vowels in that text.");
+							}
 						askToPlayAgain();
 					}
 			}
