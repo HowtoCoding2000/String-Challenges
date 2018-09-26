@@ -73,7 +73,6 @@ public class StringChallenges
 								stillAsking = true;
 							}
 					}
-				
 			}
 		public static void useYourInsideVoice()
 			{
